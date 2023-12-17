@@ -1,5 +1,17 @@
 # set-large-timeout
-setTimeout greater than 0x7FFFFFFF (2147483647)
+setTimeout greater than 0x7FFFFFFF (2147483647) milliseconds
+
+#### Install
+
+```
+npm install set-large-timeout --save
+```
+
+or using yarn
+
+```
+yarn add set-large-timeout
+```
 
 ## example
 
