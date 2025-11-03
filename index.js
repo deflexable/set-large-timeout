@@ -22,4 +22,15 @@ const setLargeTimeout = (func, ms) => {
     }
 }
 
-module.exports = setLargeTimeout;
+const setLargeInterval = (func, ms) => {
+    let stop = setLargeTimeout(() => {
+        stop = setLargeInterval(func, ms);
+        func();
+    }, ms);
+
+    return () => {
+        stop();
+    };
+}
+
+module.exports = { setLargeTimeout, setLargeInterval };

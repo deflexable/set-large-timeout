@@ -13,10 +13,10 @@ or using yarn
 yarn add set-large-timeout
 ```
 
-## example
+## example for timeout
 
 ```js
-import setLargeTimeout from "set-large-timeout";
+import { setLargeTimeout } from "set-large-timeout";
 
 const one_year = 2419200000;
 
@@ -28,8 +28,15 @@ const unsubscribe = setLargeTimeout(() => {
 unsubscribe();
 ```
 
-## details
+## example for interval
 
-The maximum delay that can be set with setTimeout is platform-dependent and is related to the limits of the 32-bit signed integer representation used for the delay parameter.
+```js
+import { setLargeInterval } from "set-large-timeout";
 
-In a 32-bit signed integer system, the maximum value that can be represented is 2,147,483,647. Therefore, the maximum delay that can be set with setTimeout is approximately 2,147,483,647 milliseconds, which is equivalent to approximately 24.86 days.
+const unsubscribe = setLargeInterval(() => {
+  console.log('called every 3 years 😮‍💨');
+}, one_year * 3);
+
+// clear interval
+unsubscribe();
+```

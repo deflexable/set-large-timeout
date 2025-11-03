@@ -1,6 +1,6 @@
 {
   "name": "set-large-timeout",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "setTimeout greater than 0x7FFFFFFF (2147483647)",
   "main": "index.js",
   "repository": "https://github.com/deflexable/set-large-timeout.git",
@@ -8,6 +8,7 @@
   "license": "MIT",
   "keywords": [
     "setTimeout",
+    "setInterval",
     "milliseconds",
     "0x7FFFFFFF",
     "2147483647",
